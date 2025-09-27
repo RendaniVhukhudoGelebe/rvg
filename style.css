@@ -46,8 +46,8 @@ html, body {
 
 /* HERO */
 .hero {
-  width: 100%;
-  height: 100vh;              /* fills entire screen height */
+  width: 100vw;
+  height: 100vh;              /* full screen height */
   background: black;
   display: flex;
   flex-direction: column;
@@ -89,22 +89,27 @@ html, body {
 
 /* SECTIONS */
 section {
-  padding: 40px 20px;
+  width: 100vw;                /* full width for all sections */
   text-align: center;
-  width: 100%;
+  padding: 50px 20px;
 }
 
+/* ROUND-EDGED BOXES */
 .rounded-section {
-  background: #222;
-  color: white;
   border-radius: 18px;
-  margin: 25px auto;
-  max-width: 95%;
-  padding: 30px 15px;
+  margin: 40px auto;
+  padding: 30px 20px;
+  color: white;
 }
 
 #about {
   background: linear-gradient(135deg, #3498db, #2ecc71);
+}
+
+#about p {
+  max-width: 90%;
+  margin: 0 auto;              /* centre paragraph block */
+  line-height: 1.6;
 }
 
 #subscriptions {
@@ -125,13 +130,16 @@ section {
   flex-direction: column;
   gap: 20px;
   margin-top: 20px;
+  align-items: center;
 }
 
 .package {
-  background: #e96b3a; /* orange complement */
+  background: #e96b3a; /* complementary to orange background */
   color: white;
   border-radius: 14px;
   padding: 20px;
+  width: 80%;
+  max-width: 300px;
   text-align: center;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
